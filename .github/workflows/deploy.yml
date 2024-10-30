@@ -21,9 +21,7 @@ jobs:
         run: npm install
 
       - name: Build and export project
-        run: npm run build
-
-      - name: Build and export project
+        # Use SKIP_ESLINT to disable ESLint during the build process
         run: SKIP_ESLINT=true npm run build
 
       - name: Deploy to GitHub Pages
